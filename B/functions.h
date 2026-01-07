@@ -23,7 +23,7 @@ void read_text_to_decrypt(char* const text_to_decrypt_filepath, char** text_to_d
 //Will obtain and store the coordinates of the cyper by searching for the words letters in the matrix
 void obtain_and_store_coordinates(char **mat, char *const word_from_keyboard, Coordinate **coordinates);
 
-//Will transform the coodinates by flattening it and reading it as if they were on two rows
+//Will transform the coodinates as if they were being read on two rows
 void get_code_in_coordinates(Coordinate *coordinates, char *const word_from_keyboard, Coordinate **code_in_coordinates);
 
 //Will print the decrypted word by applying the code in coordinates to the matrix

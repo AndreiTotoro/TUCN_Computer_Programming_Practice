@@ -134,12 +134,27 @@ void get_code_in_coordinates(Coordinate *coordinates, char *const word_from_keyb
         perror("Failed to allocate memory");
         exit(1);
     }
-    int *flat = (int *)coordinates; 
-
     for(int k = 0; k < word_len; k++){
-        (*code_in_coordinates)[k].x = flat[k]; 
-        (*code_in_coordinates)[k].y = flat[k + word_len];
+
+    int val_x;
+    if (k % 2 == 0) {
+        val_x = coordinates[k/2].x;
     }
+    else{
+        val_x = coordinates[k/2].y;
+    }
+    int target_idx = k + word_len;
+    int val_y;
+    if (target_idx % 2 == 0){ 
+        val_y = coordinates[target_idx/2].x;
+    }
+    else{
+        val_y = coordinates[target_idx/2].y;
+    }
+    
+    (*code_in_coordinates)[k].x = val_x;
+    (*code_in_coordinates)[k].y = val_y;
+}
 }
 
 void print_decrypted_word(char **mat, Coordinate *code_in_coordinates, char const *word_from_keyboard){
