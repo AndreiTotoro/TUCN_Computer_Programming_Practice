@@ -56,10 +56,10 @@ void read_and_validate_key_mat(char* const filepath, char ***mat){
 
 void read_and_validate_word_from_keyboard(char **word_from_keyboard){
 
-    *word_from_keyboard = malloc(100 * sizeof(char));
+    *word_from_keyboard = malloc(WORD_LEN * sizeof(char));
 
     printf("Please input your word:\n");
-    fgets(*word_from_keyboard, sizeof(*word_from_keyboard), stdin);
+    fgets(*word_from_keyboard, WORD_LEN, stdin);
 
     strip_newline(*word_from_keyboard);
     

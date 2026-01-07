@@ -1,6 +1,7 @@
 #ifndef FUNCTIONS_H
 #define FUNCTIONS_H
 #define SQUARE_MATRIX_SIZE 5
+#define WORD_LEN 100
 
 typedef struct Coordinate {
     int x;
