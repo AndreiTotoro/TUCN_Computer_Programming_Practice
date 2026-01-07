@@ -16,9 +16,9 @@ int main(){
     write_code_matrix("output_text_a.txt", mat, row_num, col_num);
     write_encrypted_text("output_text_a.txt", mat, row_num, col_num, headers);
 
-    free(headers);
     for(int i = 0; i < row_num; i++){
         free(mat[i]);
     }
     free(mat);
+    free(headers);
 }
