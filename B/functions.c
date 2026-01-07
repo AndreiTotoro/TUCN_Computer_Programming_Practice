@@ -59,7 +59,7 @@ void read_and_validate_word_from_keyboard(char **word_from_keyboard){
     *word_from_keyboard = malloc(100 * sizeof(char));
 
     printf("Please input your word:\n");
-    scanf("%s", *word_from_keyboard);
+    fgets(*word_from_keyboard, sizeof(*word_from_keyboard), stdin);
 
     strip_newline(*word_from_keyboard);
     
@@ -180,6 +180,9 @@ void decrypt_and_write_encrypted_text(char **key_mat, char *text_to_decrypt, cha
             fputc(key_mat[code_in_coordinates[i].x][code_in_coordinates[i].y], file);
         }
         fputc(' ', file);
+
+        free(coordinates);
+        free(code_in_coordinates);
 
         word = strtok(NULL, " ");
     }
