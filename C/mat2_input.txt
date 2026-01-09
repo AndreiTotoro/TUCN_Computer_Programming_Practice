@@ -1,0 +1,8 @@
+8 4 2 4 b & .
+b s f 5 r , 3
+a a g 5 e $ t
+n l 7 l a 4 h
+a t m i d 4 y
+n + i m * 3 m
+a ! n e c d e
+- ? t 0 / s )
